@@ -175,6 +175,14 @@
         accResetValue.append(paraElem); // Pushing the getTime value on resetValue id p tag with new element form i.e., p tag with className getTimeValue;
       };
 
+      ////////------------------------------------------------------------------------------------
+
+      // // // // FUNCTION TO CLEAR THE TIME OF PRINTED VALUE ON THE BELOW DISPLAY/SCREEN :-
+
+      const handlerOnClearTimeBtn = () => {
+        accResetValue.innerHTML = ""; // Clearing all the printed timer values i.e., present below the clearTime btn of main display
+      };
+
       //=====////=====// Ending of defining the functions and firing on event listeners. //=====////=====//
 
       //////*******************************************************************************************************//////
@@ -186,6 +194,8 @@
       accResetBtn.addEventListener("click", handlerOnResetBtn); // Firing the event listener on click and calling the function handlerOnResetBtn;
       accStopBtn.addEventListener("click", handlerOnStopBtn); // Firing the event listener on click and calling the function handlerOnStopBtn;
       accGetTimeBtn.addEventListener("click", handlerOnGetTimeBtn); // Firing the event listener on click and calling the function handlerOnGetTimeBtn;
+      accClearBtn.addEventListener("click", handlerOnClearTimeBtn); // Firing the event listener on click and calling the function handlerOnClearTimeBtn;
+
       //=====////=====// Ending of firing the even listeners on a click. //=====////=====//
 
       //////*******************************************************************************************************//////
