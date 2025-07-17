@@ -155,6 +155,7 @@
       // // // // FUNCTION TO STOP THE TIMER IN BETWEEN THE COUNTING AND CLICK ON START BTN AGAIN TO CONTINUE COUNTING NOT FROM ZERO :-
 
       const handlerOnStopBtn = () => {
+        handlerOnGetTimeBtn(); // Whenever the user click on stop btn also wanted to print or show that counted value on display; Or also printing the stop counted value;
         accCountDown.textContent = startCounting; // Accessing the countDown id of p tag and adding the text to stop count. If again click to start btn start counting from the stop value not from 0;
         clearInterval(interValID); // Clearing the setInterval to stop on continuous counting on stop btn or take a pause;
       };
