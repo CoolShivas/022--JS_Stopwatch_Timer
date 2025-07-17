@@ -168,8 +168,10 @@
         // // // Therefore, if you click the btn getTime the counted display number print on the below after clear time button;
         let paraElem = document.createElement("p"); // Created new element i.e., p tag;
         paraElem.classList.add("getTimeValue"); // Given className to new element;
-        paraElem.textContent = startCounting; // Giving the current countDown value of display to be printed on new element;
+        // paraElem.textContent = startCounting; // Giving the current countDown value of display to be printed on new element;
         // console.log(paraElem); // Getting printed countDowns on console whenever we click getTime btn;
+        // paraElem.textContent = `The getTime value is ${startCounting - 1}`; // With the help of Template Literals we have passed the text with exact value of getTime on click; Previously, when we click on the getTime btn we get the previous value not the current one;
+        paraElem.textContent = `The getTime value is ${startCounting}`;
         accResetValue.append(paraElem); // Pushing the getTime value on resetValue id p tag with new element form i.e., p tag with className getTimeValue;
       };
 
