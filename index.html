@@ -164,8 +164,13 @@
       // // // // FUNCTION TO GET TIME MEANS THAT IF USER CLICK ON GET TIME BTN HE/SHE GET THE STOPPED COUNT VALUE PRINTED ON THE SCREEN DOWN-WARD :-
 
       const handlerOnGetTimeBtn = () => {
-        accResetValue.textContent = startCounting; // Getting value printed on the display after clear time button;
+        // accResetValue.textContent = startCounting; // Getting value printed on the display after clear time button;
         // // // Therefore, if you click the btn getTime the counted display number print on the below after clear time button;
+        let paraElem = document.createElement("p"); // Created new element i.e., p tag;
+        paraElem.classList.add("getTimeValue"); // Given className to new element;
+        paraElem.textContent = startCounting; // Giving the current countDown value of display to be printed on new element;
+        // console.log(paraElem); // Getting printed countDowns on console whenever we click getTime btn;
+        accResetValue.append(paraElem); // Pushing the getTime value on resetValue id p tag with new element form i.e., p tag with className getTimeValue;
       };
 
       //=====////=====// Ending of defining the functions and firing on event listeners. //=====////=====//
