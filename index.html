@@ -159,6 +159,15 @@
         clearInterval(interValID); // Clearing the setInterval to stop on continuous counting on stop btn or take a pause;
       };
 
+      ////////------------------------------------------------------------------------------------
+
+      // // // // FUNCTION TO GET TIME MEANS THAT IF USER CLICK ON GET TIME BTN HE/SHE GET THE STOPPED COUNT VALUE PRINTED ON THE SCREEN DOWN-WARD :-
+
+      const handlerOnGetTimeBtn = () => {
+        accResetValue.textContent = startCounting; // Getting value printed on the display after clear time button;
+        // // // Therefore, if you click the btn getTime the counted display number print on the below after clear time button;
+      };
+
       //=====////=====// Ending of defining the functions and firing on event listeners. //=====////=====//
 
       //////*******************************************************************************************************//////
@@ -169,6 +178,7 @@
       accStartBtn.addEventListener("click", handlerOnStartBtn); // Firing the event listener on click and calling the function handlerOnStartBtn;
       accResetBtn.addEventListener("click", handlerOnResetBtn); // Firing the event listener on click and calling the function handlerOnResetBtn;
       accStopBtn.addEventListener("click", handlerOnStopBtn); // Firing the event listener on click and calling the function handlerOnStopBtn;
+      accGetTimeBtn.addEventListener("click", handlerOnGetTimeBtn); // Firing the event listener on click and calling the function handlerOnGetTimeBtn;
       //=====////=====// Ending of firing the even listeners on a click. //=====////=====//
 
       //////*******************************************************************************************************//////
