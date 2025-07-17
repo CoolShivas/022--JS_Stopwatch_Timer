@@ -105,6 +105,8 @@
       // // // // Therefore, the reset btn is show the 0 one time and then continue startCounting from that number only not from 0;
       // // // // So, we have declare the startCounting variable outside the block scope to function scope to be accessible to all funciton;
 
+      let interValID; // Making accessible to all;
+
       //=====////=====// Starting of taking the references of all id's and classes. //=====////=====//
 
       const accCountDown = document.getElementById("countDown");
@@ -133,7 +135,7 @@
 
       const handlerOnStartBtn = () => {
         // let startCounting = 0; // Declaring the variable with assign 0 value;
-        setInterval(() => {
+        interValID = setInterval(() => {
           accCountDown.textContent = startCounting++; // Accessing the countDown id of p tag and adding the text to start count;
         }, 1000); // Wrapping the countDown to setInterval for calling it repeatedly on every 1 second;
       };
@@ -146,6 +148,8 @@
       const handlerOnResetBtn = () => {
         startCounting = 0; // Reassigning the startCounting variable to 0;
         accCountDown.textContent = startCounting; // Accessing the countDown id of p tag and adding the text to reset count to 0; 
+        clearInterval(interValID); // Clearing the setInterval to stop on reset btn and only show 0; Previously, it was showing the 0 one time and continuously counting again;
+
       };
 
       //=====////=====// Ending of defining the functions and firing on event listeners. //=====////=====//
