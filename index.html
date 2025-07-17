@@ -101,6 +101,10 @@
       <div class="resetValue"></div>
     </section>
     <script>
+      let startCounting = 0; // Previously,the startCounting variable is declared inside the handlerOnStartBtn function. 
+      // // // // Therefore, the reset btn is show the 0 one time and then continue startCounting from that number only not from 0;
+      // // // // So, we have declare the startCounting variable outside the block scope to function scope to be accessible to all funciton;
+
       //=====////=====// Starting of taking the references of all id's and classes. //=====////=====//
 
       const accCountDown = document.getElementById("countDown");
@@ -128,7 +132,7 @@
       // // // // FUNCTION TO START THE TIMER :-
 
       const handlerOnStartBtn = () => {
-        let startCounting = 0; // Declaring the variable with assign 0 value;
+        // let startCounting = 0; // Declaring the variable with assign 0 value;
         setInterval(() => {
           accCountDown.textContent = startCounting++; // Accessing the countDown id of p tag and adding the text to start count;
         }, 1000); // Wrapping the countDown to setInterval for calling it repeatedly on every 1 second;
